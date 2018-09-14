@@ -1,0 +1,434 @@
+{
+    "id": "9462d6ae-ffaa-4d35-b866-b8f4756cf504",
+    "modelName": "GMProject",
+    "mvc": "1.0",
+    "IsDnDProject": false,
+    "configs": [
+        
+    ],
+    "option_ecma": false,
+    "parentProject": {
+        "id": "1164eb94-3bd9-491c-9fea-d24735febbd2",
+        "modelName": "GMProjectParent",
+        "mvc": "1.0",
+        "alteredResources": [
+            {
+                "Key": "ed6a955d-5826-4f98-a450-10b414266c27",
+                "Value": {
+                    "configDeltas": [
+                        "inherited"
+                    ],
+                    "id": "daa75c32-c1d9-4306-8b90-26157c66c4ba",
+                    "resourcePath": "options\\main\\options_main.yy",
+                    "resourceType": "GMMainOptions"
+                }
+            }
+        ],
+        "hiddenResources": [
+            
+        ],
+        "projectPath": "${base_project}"
+    },
+    "resources": [
+        {
+            "Key": "003dfc25-561a-4fe6-a686-9de12977174f",
+            "Value": {
+                "id": "d5a33165-89cb-4288-b177-c35cbbdbff92",
+                "resourcePath": "sprites\\spr_player_mario_mask_wall\\spr_player_mario_mask_wall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "084168bd-00dd-4066-97a1-f5da04e9a87d",
+            "Value": {
+                "id": "25238999-01a4-47e9-aae2-b14d48acedcf",
+                "resourcePath": "views\\084168bd-00dd-4066-97a1-f5da04e9a87d.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "101a3077-a57f-433e-9985-6827463e4082",
+            "Value": {
+                "id": "044058cf-f33c-499a-ab8f-04594f8b7f3e",
+                "resourcePath": "views\\101a3077-a57f-433e-9985-6827463e4082.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "10c8a659-31a8-465f-aa9a-7711e30143e0",
+            "Value": {
+                "id": "06bf3c5d-95cc-46ad-a43b-cefd8a7dd056",
+                "resourcePath": "views\\10c8a659-31a8-465f-aa9a-7711e30143e0.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "1fbdcb10-cc03-4a2f-a899-ce4df19a11c9",
+            "Value": {
+                "id": "c603c080-c5ca-41c9-80b1-d4d45fd5c6d8",
+                "resourcePath": "views\\1fbdcb10-cc03-4a2f-a899-ce4df19a11c9.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "20b21eb3-d98d-4235-8b15-4516583d20a3",
+            "Value": {
+                "id": "ad298b6e-9c9f-42c2-893c-9f68ee003b06",
+                "resourcePath": "sprites\\spr_player_mario_idle\\spr_player_mario_idle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "22548502-9834-417e-83e4-98ea9d420451",
+            "Value": {
+                "id": "281998da-5f7c-4a04-8eb8-375fa5c75c33",
+                "resourcePath": "sprites\\spr_player_mario_crouch\\spr_player_mario_crouch.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "23f12045-d4ba-47bc-9dbd-466fa5db303a",
+            "Value": {
+                "id": "1bb9f0ae-f0b1-4eda-879a-330ab4c97580",
+                "resourcePath": "views\\23f12045-d4ba-47bc-9dbd-466fa5db303a.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "2454c9d3-41e2-4490-98ee-b20e35e65c7f",
+            "Value": {
+                "id": "8f492e96-370e-411e-a02e-8ef74194adc5",
+                "resourcePath": "sprites\\spr_player_mario_mask_crouch\\spr_player_mario_mask_crouch.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2c1bb849-31f1-4600-acc7-6ae8061b2a96",
+            "Value": {
+                "id": "2cd0b355-0f58-4e66-9db8-04fc398aebe6",
+                "resourcePath": "sprites\\spr_player_mario_fall\\spr_player_mario_fall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "316a9319-7aa4-4d49-bb2b-4a443f838883",
+            "Value": {
+                "id": "1fc7111a-d41e-4cb1-9fc3-2254d5135060",
+                "resourcePath": "views\\316a9319-7aa4-4d49-bb2b-4a443f838883.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "36c7b1d2-2364-4e94-b6e7-7a58abe40753",
+            "Value": {
+                "id": "4ce8b5ad-b712-4c4f-8ecf-bab9ff50c034",
+                "resourcePath": "views\\36c7b1d2-2364-4e94-b6e7-7a58abe40753.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "425fc556-2030-4297-8523-e0ab7e0c0514",
+            "Value": {
+                "id": "94e95e1e-73ad-48e5-808d-425b9545a533",
+                "resourcePath": "views\\425fc556-2030-4297-8523-e0ab7e0c0514.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "4961f70e-9ac2-48de-8ac4-501e77c65eca",
+            "Value": {
+                "id": "c2354267-75ac-46d4-8c8d-13067730c336",
+                "resourcePath": "views\\4961f70e-9ac2-48de-8ac4-501e77c65eca.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "596c82c2-1fd2-4cf9-a1ad-b1279e895eb0",
+            "Value": {
+                "id": "558b8d43-8520-41d2-a14a-16417bccd82b",
+                "resourcePath": "views\\596c82c2-1fd2-4cf9-a1ad-b1279e895eb0.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "5ccced68-cef2-4bec-881d-9365a7688b3d",
+            "Value": {
+                "id": "3733e450-1df0-4690-8466-386829794044",
+                "resourcePath": "views\\5ccced68-cef2-4bec-881d-9365a7688b3d.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "5e99c780-6f68-4229-bdfc-29b585b76f02",
+            "Value": {
+                "id": "62795902-c12c-4623-a131-12099641672e",
+                "resourcePath": "views\\5e99c780-6f68-4229-bdfc-29b585b76f02.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "5eefe9d3-2b92-4efe-b8df-bda0730b12da",
+            "Value": {
+                "id": "6c97be15-3fab-4f5e-bce0-19171e0800a2",
+                "resourcePath": "views\\5eefe9d3-2b92-4efe-b8df-bda0730b12da.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "611c65e2-7f46-4961-b2e2-9c15af19cb00",
+            "Value": {
+                "id": "289b6b57-9d9f-4d59-bcbc-89e6310a74fa",
+                "resourcePath": "views\\611c65e2-7f46-4961-b2e2-9c15af19cb00.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "6382d223-181c-48c3-8d43-f5e93ae1b2ce",
+            "Value": {
+                "id": "e8aac896-d84a-4900-990d-3016e9b35cc7",
+                "resourcePath": "scripts\\macros\\macros.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "688c73fc-1363-4021-b6d4-61de8b02789b",
+            "Value": {
+                "id": "4d581838-7362-4242-be47-fadf5ac80885",
+                "resourcePath": "views\\688c73fc-1363-4021-b6d4-61de8b02789b.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "75ac291e-7061-4bcb-8e8a-3b3545332d41",
+            "Value": {
+                "id": "398edba3-94fa-4894-a278-47a5f0999c09",
+                "resourcePath": "options\\html5\\options_html5.yy",
+                "resourceType": "GMHtml5Options"
+            }
+        },
+        {
+            "Key": "76ecf2d3-1dce-4791-9c12-059c8c4be3c0",
+            "Value": {
+                "id": "53c78471-cb7f-4a2a-b34e-fb101310991b",
+                "resourcePath": "objects\\obj_player\\obj_player.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "79ea45f6-282a-462e-8c96-2de4e99dd291",
+            "Value": {
+                "id": "bc4d640b-72e9-4f07-86fd-4675cf1b0b0c",
+                "resourcePath": "rooms\\rm_test00\\rm_test00.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "7acc60b6-1693-41fd-866b-0db7c5ab2057",
+            "Value": {
+                "id": "71fa8e92-1fc4-481c-beed-09ecf8ba3081",
+                "resourcePath": "scripts\\draw_rectangle_dim\\draw_rectangle_dim.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "8427047f-9ef8-4c77-89f3-9c20623d07b6",
+            "Value": {
+                "id": "4769147d-4d82-4134-8e99-ff79844a0b1c",
+                "resourcePath": "options\\ios\\options_ios.yy",
+                "resourceType": "GMiOSOptions"
+            }
+        },
+        {
+            "Key": "9538a839-525b-4c8c-b0d3-8b1fba74ce41",
+            "Value": {
+                "id": "0499d8da-f939-4591-aa50-6bedc24b2fa5",
+                "resourcePath": "sprites\\spr_block_test\\spr_block_test.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "98335810-0b4c-480b-bf23-1acddbd16dd7",
+            "Value": {
+                "id": "a5d135f0-f534-41a5-870f-96e83e0f7ed3",
+                "resourcePath": "sprites\\spr_player_mario_mask\\spr_player_mario_mask.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9a25f6df-d87b-4512-aaf1-4d91ff5fe2ce",
+            "Value": {
+                "id": "e85b6754-c1ce-43dd-87e0-c1a4d8624646",
+                "resourcePath": "views\\9a25f6df-d87b-4512-aaf1-4d91ff5fe2ce.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9c60cd85-34ad-4141-9aa3-1d19a9136c38",
+            "Value": {
+                "id": "7b0f5005-41b5-4935-919a-a24fe72412a4",
+                "resourcePath": "views\\9c60cd85-34ad-4141-9aa3-1d19a9136c38.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9e0e134e-27d3-4106-a1e6-1c598a86f947",
+            "Value": {
+                "id": "56750498-d03c-420a-8780-7f1d7399adaf",
+                "resourcePath": "views\\9e0e134e-27d3-4106-a1e6-1c598a86f947.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9f576c33-f6db-4798-bddb-aab96101cd80",
+            "Value": {
+                "id": "833980e0-2118-4beb-88bf-7bcfc240fd21",
+                "resourcePath": "sprites\\spr_player_mario_jump\\spr_player_mario_jump.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a128950b-5063-4876-b4a6-b99dbd2ea6d1",
+            "Value": {
+                "id": "0547e62a-0690-4ffe-ab79-114501d129ba",
+                "resourcePath": "options\\amazonfire\\options_amazonfire.yy",
+                "resourceType": "GMAmazonFireOptions"
+            }
+        },
+        {
+            "Key": "a55efd54-8469-4dc7-8e75-18ab8e59b2a2",
+            "Value": {
+                "id": "a8279e05-1018-44fe-a835-a8fd31daa539",
+                "resourcePath": "scripts\\string_bool\\string_bool.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
+            "Value": {
+                "id": "84193e61-7abc-4165-9fa7-5da715f866ad",
+                "resourcePath": "options\\linux\\options_linux.yy",
+                "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "ae535459-c7dc-4450-ab7f-7029009ae701",
+            "Value": {
+                "id": "fa1bba17-a11e-4507-9070-f784241dbf14",
+                "resourcePath": "fonts\\fnt_dev\\fnt_dev.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "b75e46f0-1490-41bf-925d-a0bf78dd25cc",
+            "Value": {
+                "id": "d0a52dba-87f0-408c-b915-1e99b1e0bc5d",
+                "resourcePath": "views\\b75e46f0-1490-41bf-925d-a0bf78dd25cc.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "bf111e36-d1d2-442b-bbbd-2b1b9bad8697",
+            "Value": {
+                "id": "c955d27e-b2b6-4758-af55-52be718d12b0",
+                "resourcePath": "sprites\\spr_player_test_idle\\spr_player_test_idle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c586f1c0-094a-486e-a54b-c17b3efea97b",
+            "Value": {
+                "id": "7c8f4251-e0c6-4130-a931-3b9c248c4cfa",
+                "resourcePath": "views\\c586f1c0-094a-486e-a54b-c17b3efea97b.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
+            "Value": {
+                "id": "63cfa1e3-c870-420c-9d7d-e89c8beaf065",
+                "resourcePath": "options\\windows\\options_windows.yy",
+                "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "d45a9f6d-8055-40c0-adb8-9a8b3b706634",
+            "Value": {
+                "id": "86d5df44-2020-486b-ace8-215e6c612389",
+                "resourcePath": "sprites\\spr_player_mario_wall\\spr_player_mario_wall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "dda11364-b761-4110-b14f-e030a2a43062",
+            "Value": {
+                "id": "a565bcde-385e-4926-8d72-498701223cd8",
+                "resourcePath": "objects\\obj_control\\obj_control.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e0aa15db-6c75-4d91-83a0-1bb02c008faa",
+            "Value": {
+                "id": "2422e88b-00d0-4172-9d70-7e9de5c1004e",
+                "resourcePath": "scripts\\scr_dev_control\\scr_dev_control.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e1ff3366-f968-4daf-9f90-5b338ec51b7e",
+            "Value": {
+                "id": "d64ffd96-81aa-4991-9977-e9c42ebd8ad5",
+                "resourcePath": "objects\\obj_block\\obj_block.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e42bf5cc-3f46-4d67-a6d0-a4885a11ac3f",
+            "Value": {
+                "id": "f3c536b7-cfc5-4580-b214-13e0765b3727",
+                "resourcePath": "options\\android\\options_android.yy",
+                "resourceType": "GMAndroidOptions"
+            }
+        },
+        {
+            "Key": "f0f942b8-2d56-4fa7-a17f-92d1afadae7f",
+            "Value": {
+                "id": "971ca05d-b626-4ace-bf05-270db9214165",
+                "resourcePath": "scripts\\scr_control_input\\scr_control_input.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
+            "Value": {
+                "id": "ebe410f9-5ee4-4193-87b0-349eceec7267",
+                "resourcePath": "options\\mac\\options_mac.yy",
+                "resourceType": "GMMacOptions"
+            }
+        },
+        {
+            "Key": "f73ec23d-86af-4d41-b572-78c6b3c0365a",
+            "Value": {
+                "id": "fd68d31e-a502-42d1-9e3b-15be9041a89c",
+                "resourcePath": "views\\f73ec23d-86af-4d41-b572-78c6b3c0365a.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "fb98e3b1-8484-469b-8dbf-4650150bb765",
+            "Value": {
+                "id": "c2747b8d-d2dc-4e5d-a2ab-a694d8d07839",
+                "resourcePath": "sprites\\spr_player_mario_run\\spr_player_mario_run.yy",
+                "resourceType": "GMSprite"
+            }
+        }
+    ],
+    "script_order": [
+        "6382d223-181c-48c3-8d43-f5e93ae1b2ce",
+        "f0f942b8-2d56-4fa7-a17f-92d1afadae7f",
+        "e0aa15db-6c75-4d91-83a0-1bb02c008faa",
+        "7acc60b6-1693-41fd-866b-0db7c5ab2057",
+        "a55efd54-8469-4dc7-8e75-18ab8e59b2a2"
+    ],
+    "tutorial": ""
+}
