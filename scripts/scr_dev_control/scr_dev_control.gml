@@ -14,14 +14,16 @@ if(dev_show_key){
 	global.dev_show = !global.dev_show;
 }
 
-if(dev_quit_key){
-	game_end();
-}
+if(global.dev){
+	if(dev_quit_key){
+		game_end();
+	}
 
-if(dev_restart_key){
-	game_restart();
-}
+	if(dev_restart_key){
+		game_restart();
+	}
 
-if(dev_restart_room_key){
-	room_restart();
+	if(dev_restart_room_key){
+		room_restart();
+	}
 }

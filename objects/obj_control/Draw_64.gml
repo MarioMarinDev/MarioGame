@@ -17,10 +17,15 @@ if(global.dev){
 	
 	// Mario Stats
 	if(instance_exists(obj_player)){
+		draw_text(xx, yy, "Mario coord: " + string(obj_player.x) + ", " + string(obj_player.y)); yy += ys;
 		draw_text(xx, yy, "Mario spd: " + string(obj_player.hspd) + ", " + string(obj_player.vspd)); yy += ys;
 		draw_text(xx, yy, "Mario on_groud: " + string_bool(obj_player.on_ground)); yy += ys;
 		draw_text(xx, yy, "Mario crouching: " + string_bool(obj_player.crouching)); yy += ys;
 		draw_text(xx, yy, "Mario wall_sliding: " + string_bool(obj_player.wall_sliding)); yy += ys;
+	}
+	
+	if(instance_exists(obj_camera)){
+		draw_text(xx, yy, "Camera coord: " + string(obj_camera.x) + ", " + string(obj_camera.y)); yy += ys;
 	}
 	
 	y_max = yy + ys;

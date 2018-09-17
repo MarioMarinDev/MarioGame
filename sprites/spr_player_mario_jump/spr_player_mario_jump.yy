@@ -6,10 +6,10 @@
     "For3D": false,
     "HTile": false,
     "VTile": false,
-    "bbox_bottom": 28,
+    "bbox_bottom": 29,
     "bbox_left": 1,
     "bbox_right": 22,
-    "bbox_top": 0,
+    "bbox_top": 1,
     "bboxmode": 0,
     "colkind": 1,
     "coltolerance": 0,
@@ -40,7 +40,7 @@
     ],
     "gridX": 0,
     "gridY": 0,
-    "height": 30,
+    "height": 31,
     "layers": [
         {
             "id": "22212ea4-c636-4067-b525-1273a294c140",
