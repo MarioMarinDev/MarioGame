@@ -4,11 +4,13 @@
 state = NULL;
 moveable = true;
 jumping = false;
+jumping_forced = false;
 on_ground = false;
 crouching = false;
 wall_sliding = false;
 wall_sliding_dir = NULL;
 ground_pound = false;
+defeat = false;
 #endregion
 
 #region Movement variables
@@ -29,6 +31,9 @@ step_size = 1.5;
 
 hspd = 0;
 vspd = 0;
+
+defeat_elevation = 80;
+jumping_forced_elevation = 30;
 #endregion
 
 #region Delay variables
@@ -44,6 +49,7 @@ sprite_fall = spr_player_mario_fall;
 sprite_crouch = spr_player_mario_crouch;
 sprite_wall = spr_player_mario_wall;
 sprite_ground_pound = spr_player_mario_ground_pound;
+sprite_defeat = spr_player_defeat;
 
 mask_normal = spr_player_mario_mask;
 mask_crouch = spr_player_mario_mask_crouch;

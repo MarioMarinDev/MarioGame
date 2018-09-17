@@ -21,12 +21,45 @@ switch(anim_type){
 				}else{
 					y += spd;
 				}
-				if(y > room_height){
-					instance_destroy();
-				}
 			break;
 		}
 	break;
 	#endregion
 	
+	#region Drop Animation
+	case ANIM_DROP:
+		switch(anim_state){
+			case NULL:
+				anim_state = START;
+			break;
+			case START:
+				y += spd;
+			break;
+		}
+	break;
+	#endregion
+	
+	#region Player Defeat Animation	
+	case ANIM_PLAYER_DEFEAT:
+		switch(anim_state){
+			case NULL:
+				elevation = 80;
+				anim_state = START;
+			break;
+			case START:
+				if(elevation > 0){
+					y -= spd;
+					elevation -= abs(spd);
+				}else y += spd;
+				if y > room_height && elevation <= 0 room_goto(room);
+			break;
+		}
+	break;
+	#endregion
+	
+}
+
+// Destroy if outside of room
+if(y > room_height){
+	instance_destroy();
 }

@@ -1,0 +1,25 @@
+/// @desc: Cannon Ball Control
+
+var hspd = lengthdir_x(spd, dir);
+var vspd = lengthdir_y(spd, dir);
+
+x += hspd;
+y += vspd;
+
+var destroyed = false;
+if(scr_player_ground_pound_hit(id)){
+	destroyed = true;
+}else if(scr_player_jump_on(id)){
+	destroyed = true;
+	scr_player_force_jump(20);
+}else if(place_meeting(x, y, obj_player)){
+	scr_player_defeat();
+	destroyed = true;
+}
+
+if(destroyed){
+	var particle = instance_create_depth(x, y, depth, obj_particle);
+	particle.sprite_index = sprite_index;
+	particle.anim_type = ANIM_DROP;
+	instance_destroy();
+}

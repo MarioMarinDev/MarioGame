@@ -1,7 +1,7 @@
 /// @desc: Coin Control
 
 if(type == BLOCK){
-	if(moved < sprite_get_width(sprite_index) * image_xscale){
+	if(moved < (sprite_get_width(sprite_index) * image_xscale) * 1.3){
 		y += spd * dir;
 		moved += spd;
 	}else{

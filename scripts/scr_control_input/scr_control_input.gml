@@ -1,17 +1,16 @@
 /// scr_control_input
 
 var move_right, move_left, move_up, move_down;
-var jump, jump_pressed, jump_released;
-var run;
+var jump, run;
 
 switch(control_type){
 	case KEYBOARD:
-		move_right = ord("D");
-		move_left = ord("A");
-		move_up = ord("W");
-		move_down = ord("S");
-		jump = vk_space;
-		run = vk_shift;
+		move_right = [ord("D"), vk_right];
+		move_left = [ord("A"), vk_left];
+		move_up = [ord("W"), vk_up];
+		move_down = [ord("S"), vk_down];
+		jump = [vk_space, ord("L")];
+		run = [vk_shift, ord("K")];
 	break;
 	case CONTROLLER:
 		jump = gp_face1;
@@ -22,16 +21,16 @@ switch(control_type){
 
 switch(control_type){
 	case KEYBOARD:
-		global.move_right = keyboard_check(move_right);
-		global.move_left = keyboard_check(move_left);
-		global.move_up = keyboard_check(move_up);
-		global.move_down = keyboard_check(move_down);
+		global.move_right = keyboard_check_array(NORMAL, move_right);
+		global.move_left = keyboard_check_array(NORMAL, move_left);
+		global.move_up = keyboard_check_array(NORMAL, move_up);
+		global.move_down = keyboard_check_array(NORMAL, move_down);
 
-		global.jump = keyboard_check(jump);
-		global.jump_pressed = keyboard_check_pressed(jump);
-		global.jump_released = keyboard_check_released(jump);
+		global.jump = keyboard_check_array(NORMAL, jump);
+		global.jump_pressed = keyboard_check_array(PRESSED, jump);
+		global.jump_released = keyboard_check_array(RELEASED, jump);
 		
-		global.run = keyboard_check(run);
+		global.run = keyboard_check_array(NORMAL, run);
 	break;
 	
 	case CONTROLLER:

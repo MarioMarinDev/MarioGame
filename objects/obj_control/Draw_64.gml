@@ -22,6 +22,8 @@ if(global.dev){
 		draw_text(xx, yy, "Mario on_groud: " + string_bool(obj_player.on_ground)); yy += ys;
 		draw_text(xx, yy, "Mario crouching: " + string_bool(obj_player.crouching)); yy += ys;
 		draw_text(xx, yy, "Mario wall_sliding: " + string_bool(obj_player.wall_sliding)); yy += ys;
+		draw_text(xx, yy, "Mario moveable: " + string_bool(obj_player.moveable)); yy += ys;
+		draw_text(xx, yy, "Mario defeat: " + string_bool(obj_player.defeat)); yy += ys;
 	}
 	
 	if(instance_exists(obj_camera)){

@@ -7,6 +7,8 @@
 
 #macro KEYBOARD 15
 #macro CONTROLLER 16
+#macro PRESSED 17
+#macro RELEASED 18
 
 // Game macros [ 21 - 50 ]
 #macro NORMAL 21
@@ -20,3 +22,5 @@
 
 // Animation macros [ 51 - 70 ]
 #macro ANIM_BRICK_DESTROY 51
+#macro ANIM_DROP 52
+#macro ANIM_PLAYER_DEFEAT 53
