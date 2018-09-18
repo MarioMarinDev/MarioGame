@@ -1,5 +1,7 @@
 /// @desc: Arrow Block Variables
 
+event_inherited();
+
 sprite = sprite_index;
 
 x_block = lengthdir_x(1, image_angle);

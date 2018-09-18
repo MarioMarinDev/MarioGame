@@ -1,5 +1,7 @@
 /// @desc: Normal Block Variables
 
+event_inherited();
+
 width = bbox_right - bbox_left;
 height = bbox_bottom - bbox_top;
 

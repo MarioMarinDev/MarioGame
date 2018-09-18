@@ -27,7 +27,7 @@ if( (on_ground || jumping) && global.run){
 #endregion
 
 #region Crouch control
-if(on_ground && !wall_sliding && global.move_down){
+if(on_ground && !wall_sliding && !win && global.move_down){
 	crouching = true;
 	real_fric = fric_crouch;
 }else if(!place_meeting(x, bbox_bottom - (sprite_get_height(mask_index) * image_yscale), obj_block) && !global.move_down) 

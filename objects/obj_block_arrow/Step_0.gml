@@ -1,5 +1,7 @@
 /// @desc: Arrow Block Control
 
+event_inherited();
+
 var enable = true;
 
 if(instance_exists(obj_player)){
@@ -10,5 +12,7 @@ if(instance_exists(obj_player)){
 	
 	if enable mask_index = sprite_mask;
 	else mask_index = noone;
+	if enable active = true;
+	else active = false;
 	
 }

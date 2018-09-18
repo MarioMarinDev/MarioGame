@@ -1,5 +1,7 @@
 /// @desc: Normal Block Control
 
+event_inherited();
+
 #region Break Control
 if(scr_player_jump_hit(id) || scr_player_ground_pound_hit(id)){
 	scr_player_cancel_jump();

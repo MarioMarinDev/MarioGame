@@ -1,6 +1,7 @@
 /// @desc: Arrow Block
 
-draw_self();
+// draw_sprite_ext(sprite, 0, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+event_inherited();
 
 if(global.dev){
 	scr_dev_draw_defaults();

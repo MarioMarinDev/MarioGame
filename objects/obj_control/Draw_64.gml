@@ -15,6 +15,9 @@ if(global.dev){
 	draw_text(xx, yy, string(fps) + " DEVELOPER MODE (" + room_get_name(room) + ")"); yy += ys;
 	draw_text(xx, yy, "Room Instances: " + string(instance_count)); yy += ys;
 	
+	if global.game_secrets
+		draw_text(xx, yy, "SECRETS ACTIVATED!  " + string(alarm[1])); yy += ys;
+	
 	// Mario Stats
 	if(instance_exists(obj_player)){
 		draw_text(xx, yy, "Mario coord: " + string(obj_player.x) + ", " + string(obj_player.y)); yy += ys;
