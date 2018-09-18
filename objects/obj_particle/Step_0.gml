@@ -51,7 +51,24 @@ switch(anim_type){
 					y -= spd;
 					elevation -= abs(spd);
 				}else y += spd;
-				if y > room_height && elevation <= 0 room_goto(room);
+				//if y > room_height && elevation <= 0 room_goto(room);
+				if object_outside_view(id) && elevation <= 0 room_goto(room);
+			break;
+		}
+	break;
+	#endregion
+	
+	#region Drop Fade Animation
+	case ANIM_DROP_FADE:
+		switch(anim_state){
+			case NULL:
+				anim_state = START;
+			break;
+			case START:
+				y += spd;
+				if image_alpha > 0 
+					image_alpha -= fade_spd;
+				else instance_destroy();
 			break;
 		}
 	break;
@@ -60,6 +77,4 @@ switch(anim_type){
 }
 
 // Destroy if outside of room
-if(y > room_height){
-	instance_destroy();
-}
+if object_outside_room(id) instance_destroy();

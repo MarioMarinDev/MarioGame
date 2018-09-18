@@ -5,9 +5,9 @@
 #region Movement Control
 
 #region Get player input
-if(!ground_pound){
+if(!ground_pound && !win){
 	xaxis = global.move_right - global.move_left;
-}
+}else xaxis = 0;
 #endregion
 
 #region Local variables
@@ -38,6 +38,7 @@ else if crouching real_spd_acceleration *= 0.5;
 
 #region Apply fiction
 if(xaxis != sign(hspd)){ 
+	if win hspd = 0;
 	if abs(hspd) > 1 hspd = clamp(hspd + (real_fric * (sign(hspd) * -1)), -real_spd_max, real_spd_max);
 	else if xaxis == 0 hspd = 0;
 }
@@ -74,7 +75,7 @@ if(wall_sliding && global.jump_pressed){
 if crouching real_jump_max = jump_max * 0.5;
 if global.jump_pressed && on_ground && alarm[5] <= 0 jumping = true;
 if global.jump_released && jumping jumping = false;
-if(global.jump && jump_air < real_jump_max && jumping){ 
+if(global.jump && jump_air < real_jump_max && jumping && !win){ 
 	vspd = -jump_spd;
 	jump_air += jump_spd;
 }
@@ -111,6 +112,20 @@ if(place_meeting(x + hspd, y, obj_block) && moveable){
 		hspd = 0;
 	}else y -= step_size;
 }
+
+// Vertical collision check
+if(place_meeting(x, y + vspd, obj_block_invisible) && moveable){
+	while(!place_meeting(x, y + sign(vspd), obj_block_invisible))
+		y += sign(vspd);
+	vspd = 0;
+}
+
+// Horizontal collision check
+if(place_meeting(x + hspd, y, obj_block_invisible) && moveable){
+	while(!place_meeting(x + sign(hspd), y, obj_block_invisible))
+		x += sign(hspd);
+	hspd = 0;
+}
 #endregion
 
 #region Apply movement
@@ -134,6 +149,10 @@ if(ground_pound && on_ground && alarm[5] <= 0){
 	scr_ac_add(ac, sound_ground_pound_hit, 5, false, true, true, true);
 	alarm[5] = delay_ground_pound;
 }
+#endregion
+
+#region Win Control
+if win && on_ground && alarm[6] <= 0 alarm[6] = delay_win;
 #endregion
 
 #region Defeat Control
@@ -173,6 +192,7 @@ if(ground_pound){
 	else image_angle = 0;
 }
 if defeat sprite_index = sprite_defeat;
+if win && on_ground sprite_index = sprite_win;
 
 // Change facing direction
 if xaxis > 0 image_xscale = abs(image_xscale);

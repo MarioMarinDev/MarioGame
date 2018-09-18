@@ -15,11 +15,15 @@ if(scr_player_ground_pound_hit(id)){
 }else if(place_meeting(x, y, obj_player)){
 	scr_player_defeat();
 	destroyed = true;
+}else if(place_meeting(x, y, obj_block) && alarm[1] <= 0){
+	destroyed = true;	
 }
 
 if(destroyed){
 	var particle = instance_create_depth(x, y, depth, obj_particle);
 	particle.sprite_index = sprite_index;
-	particle.anim_type = ANIM_DROP;
+	particle.anim_type = ANIM_DROP_FADE;
 	instance_destroy();
 }
+
+if object_outside_room(id) instance_destroy();

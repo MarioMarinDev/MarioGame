@@ -1,3 +1,5 @@
 /// @desc: Particle
 
-if anim_state != NULL draw_self();
+draw_self();
+
+//if anim_state != NULL draw_self();

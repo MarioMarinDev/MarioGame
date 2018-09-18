@@ -5,6 +5,7 @@ anim_state = NULL;
 
 elevation = 0;
 spd = 1.33;
+fade_spd = 0.01;
 hspd = 0;
 vspd = 0;
 

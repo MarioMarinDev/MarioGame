@@ -12,6 +12,11 @@ view_camera[0] = camera;
 #region Properties variables
 follows = noone;
 spd = 1;
+init = false;
+zoom = false;
+zoom_x = 0;
+zoom_y = 0;
+zoom_spd = 16;
 #endregion
 
 #region Movement variables
