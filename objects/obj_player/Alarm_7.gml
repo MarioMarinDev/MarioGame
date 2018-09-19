@@ -1,3 +1,4 @@
 /// @desc: Change ROOM Timer
 
-rm_goto(room);
+global.game_win = true;
+global.game_next_room = room_next(room);

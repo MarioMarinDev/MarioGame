@@ -28,9 +28,9 @@ if alarm[0] <= 0 hitting = false;
 
 #region // Sprite control
 if(hit){
-	sprite_index = sprite_hit;
+	sprite = sprite_hit;
 	image_speed = 0;
-	if hitting image_index = 1;
-	else image_index = 0; 
-}else sprite_index = sprite_normal;
+	if hitting frame = 1;
+	else frame = 0; 
+}else sprite = sprite_normal;
 #endregion

@@ -13,8 +13,12 @@ switch(control_type){
 		run = [vk_shift, ord("K")];
 	break;
 	case CONTROLLER:
-		jump = gp_face1;
-		run = gp_face3;
+		move_right = [gp_axislh, gp_padr];
+		move_left = [gp_axislh, gp_padl];
+		move_up = [gp_axislv, gp_padu];
+		move_down = [gp_axislv, gp_padd];
+		jump = [gp_face1, gp_face4];
+		run = [gp_face3, gp_face2, gp_shoulderlb, gp_shoulderrb];
 	break;
 }
 
@@ -35,26 +39,15 @@ switch(control_type){
 	
 	case CONTROLLER:
 		gamepad_set_axis_deadzone(control_id, 0.4);
-		#region Movement
-		if sign(gamepad_axis_value(control_id, gp_axislh)) > 0
-			global.move_right = 1;
-		else global.move_right = 0;
-		if sign(gamepad_axis_value(control_id, gp_axislh)) < 0
-			global.move_left = 1;
-		else global.move_left = 0;
-		if sign(gamepad_axis_value(control_id, gp_axislv)) > 0
-			global.move_down = 1;
-		else global.move_down = 0;
-		if sign(gamepad_axis_value(control_id, gp_axislv)) < 0
-			global.move_up = 1;
-		else global.move_up = 0;
-		#endregion
+		global.move_right = gamepad_check_array(AXIS_POSITIVE, move_right, control_id);
+		global.move_left = gamepad_check_array(AXIS_NEGATIVE, move_left, control_id);
+		global.move_down = gamepad_check_array(AXIS_POSITIVE, move_down, control_id);
+		global.move_up = gamepad_check_array(AXIS_NEGATIVE, move_up, control_id);
 		
-		global.jump = gamepad_button_check(control_id, jump);
-		global.jump_pressed = gamepad_button_check_pressed(control_id, jump);
-		global.jump_released = gamepad_button_check_released(control_id, jump);
+		global.jump = gamepad_check_array(NORMAL, jump, control_id);
+		global.jump_pressed = gamepad_check_array(PRESSED, jump, control_id);
+		global.jump_released = gamepad_check_array(RELEASED, jump, control_id);
 		
-		global.run = gamepad_button_check(control_id, run);
-		
+		global.run = gamepad_check_array(NORMAL, run, control_id);
 	break;
 }

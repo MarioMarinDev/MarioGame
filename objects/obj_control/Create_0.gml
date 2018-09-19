@@ -1,11 +1,15 @@
 /// @desc: Setup
 
+global.game_win = false;
+global.game_next_room = room;
 global.game_gravity = 4;
 global.game_gravity_acc = 0.05;
 global.game_widthView = 640;
 global.game_heightView = 380;
 global.game_secrets = false;
 global.game_secrets_delay = room_speed * 10;
+
+global.game_sound_win = snd_win00;
 
 global.dev = false;
 global.dev_show = true;

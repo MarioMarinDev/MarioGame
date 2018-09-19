@@ -152,7 +152,7 @@ if(ground_pound && on_ground && alarm[5] <= 0){
 #endregion
 
 #region Win Control
-if win && on_ground && alarm[6] <= 0 alarm[6] = delay_win;
+if win && on_ground && !camera.zoom && alarm[6] <= 0 alarm[6] = delay_win;
 #endregion
 
 #region Defeat Control

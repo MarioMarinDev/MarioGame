@@ -9,6 +9,8 @@
 #macro CONTROLLER 16
 #macro PRESSED 17
 #macro RELEASED 18
+#macro AXIS_POSITIVE 19
+#macro AXIS_NEGATIVE 20
 
 // Game macros [ 21 - 50 ]
 #macro NORMAL 21

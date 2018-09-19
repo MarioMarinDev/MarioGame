@@ -1,6 +1,8 @@
 /// @desc: Block
 
-draw_self();
+event_inherited();
+
+//draw_self();
 
 if(global.dev){
 	scr_dev_draw_defaults();

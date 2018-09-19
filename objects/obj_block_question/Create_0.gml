@@ -1,5 +1,7 @@
 /// @desc: Block Variables
 
+event_inherited();
+
 #region Properties variables
 hit = false;
 hit_dir = 0;
