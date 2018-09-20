@@ -5,7 +5,8 @@
     "name": "36f4f9fe-ca15-4d57-94d0-d8691db8b472",
     "children": [
         "76b73e84-6575-42e9-98dc-19dafb13fd3f",
-        "ea720645-e2bf-4022-9375-20b693ba2260"
+        "ea720645-e2bf-4022-9375-20b693ba2260",
+        "e56b4693-0fb7-4e94-a453-764d1c2d3e68"
     ],
     "filterType": "GMScript",
     "folderName": "OBJ Audio Controller",

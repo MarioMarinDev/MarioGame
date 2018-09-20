@@ -22,6 +22,7 @@ if(instance_exists(owner) && grab_able){
 	y = owner.y - 4;
 	if(!global.run){
 		if(global.move_up){
+			scr_player_add_sound(sound_kick, 5, false, true, true, true);
 			alarm[2] = delay_active;
 			elevation = jump_max;
 			side_force = obj_player.xaxis;

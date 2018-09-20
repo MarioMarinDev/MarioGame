@@ -186,34 +186,35 @@ if(defeat){
 #endregion
 
 #region Sprite Control
+if(moveable || ground_pound){
+	if xaxis == 0 
+		if !grabbing_something sprite_index = sprite_idle;
+		else sprite_index = sprite_grab_idle;
+	else if abs(hspd) >= spd_run * 0.95 sprite_index = sprite_run;
+	else if !grabbing_something sprite_index = sprite_walk;
+	else sprite_index = sprite_grab_walk;
+	if !on_ground{
+		if vspd <= 1 
+			if !grabbing_something sprite_index = sprite_jump;
+			else sprite_index = sprite_grab_jump;
+		else if vspd > 1 
+			if !grabbing_something sprite_index = sprite_fall;
+			else sprite_index = sprite_grab_fall;
+		if wall_sliding sprite_index = sprite_wall;
+	}
+	if crouching sprite_index = sprite_crouch;
+	if(ground_pound){
+		sprite_index = sprite_ground_pound;
+		if alarm[4] > 0 image_angle += (360 / delay_ground_pound) * sign(-image_xscale)
+		else image_angle = 0;
+	}
+	if defeat sprite_index = sprite_defeat;
+	if win && on_ground sprite_index = sprite_win;
 
-if xaxis == 0 
-	if !grabbing_something sprite_index = sprite_idle;
-	else sprite_index = sprite_grab_idle;
-else if abs(hspd) >= spd_run * 0.95 sprite_index = sprite_run;
-else if !grabbing_something sprite_index = sprite_walk;
-else sprite_index = sprite_grab_walk;
-if !on_ground{
-	if vspd <= 1 
-		if !grabbing_something sprite_index = sprite_jump;
-		else sprite_index = sprite_grab_jump;
-	else if vspd > 1 
-		if !grabbing_something sprite_index = sprite_fall;
-		else sprite_index = sprite_grab_fall;
-	if wall_sliding sprite_index = sprite_wall;
+	// Change facing direction
+	if xaxis > 0 image_xscale = abs(image_xscale);
+	else if xaxis < 0 image_xscale = abs(image_xscale) * -1;
 }
-if crouching sprite_index = sprite_crouch;
-if(ground_pound){
-	sprite_index = sprite_ground_pound;
-	if alarm[4] > 0 image_angle += (360 / delay_ground_pound) * sign(-image_xscale)
-	else image_angle = 0;
-}
-if defeat sprite_index = sprite_defeat;
-if win && on_ground sprite_index = sprite_win;
-
-// Change facing direction
-if xaxis > 0 image_xscale = abs(image_xscale);
-else if xaxis < 0 image_xscale = abs(image_xscale) * -1;
 #endregion
 
 #region Mask Control
@@ -223,6 +224,8 @@ else mask_index = mask_normal;
 #endregion
 
 #region Sound Control
-if jumping && !win scr_ac_add(ac, sound_jump, 5, false, false, false, false);
-else scr_ac_remove(ac, sound_jump);
+if(moveable){
+	if jumping && !win scr_ac_add(ac, sound_jump, 5, false, false, false, false);
+	else scr_ac_remove(ac, sound_jump);
+}
 #endregion

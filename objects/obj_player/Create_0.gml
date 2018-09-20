@@ -2,6 +2,7 @@
 
 #region Properties variables
 state = NULL;
+first_move = false;
 moveable = true;
 jumping = false;
 jumping_forced = false;
