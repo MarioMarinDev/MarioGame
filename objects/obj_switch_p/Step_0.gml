@@ -15,7 +15,7 @@ if(just_hit){
 	active = false;
 	frame = 1;
 	grab_able = false;
-	scr_control_active_secrets();
+	scr_control_active_secrets(secret_type);
 	scr_player_add_sound(snd_switch_p00, 4, false, true, true, true);
 	scr_player_add_sound(snd_switch_p_music00, 5, false, true, false, false, true);
 	alarm[3] = room_speed / 2;

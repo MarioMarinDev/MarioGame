@@ -12,6 +12,8 @@ global.game_widthView = 640;
 global.game_heightView = 380;
 global.game_secrets = false;
 global.game_secrets_delay = room_speed * 10;
+global.game_secrets_red = false;
+global.game_secrets_red_complete = false;
 
 global.game_sound_win = snd_win00;
 

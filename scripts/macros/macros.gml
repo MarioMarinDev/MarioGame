@@ -23,6 +23,8 @@
 #macro FINISH 28
 #macro FADE_IN 29
 #macro FADE_OUT 30
+#macro BLUE 31
+#macro RED 32
 
 // Animation macros [ 51 - 70 ]
 #macro ANIM_BRICK_DESTROY 51

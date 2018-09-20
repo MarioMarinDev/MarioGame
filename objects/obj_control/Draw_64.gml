@@ -17,6 +17,8 @@ if(global.dev){
 	
 	if global.game_secrets
 		draw_text(xx, yy, "SECRETS ACTIVATED!  " + string(alarm[1])); yy += ys;
+	if global.game_secrets_red
+		draw_text(xx, yy, "RED COINS APPEARED! " + string(alarm[1])); yy += ys;
 	
 	// Mario Stats
 	if(instance_exists(obj_player)){

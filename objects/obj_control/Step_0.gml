@@ -15,3 +15,8 @@ if(global.game_defeat){
 	rm_goto(global.game_next_room);
 }
 #endregion
+
+#region Red Coins Game Control
+if instance_number(obj_coin_red) <= 0 global.game_secrets_red_complete = true;
+else global.game_secrets_red_complete = false;
+#endregion

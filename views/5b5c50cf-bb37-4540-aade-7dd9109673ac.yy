@@ -6,7 +6,8 @@
     "children": [
         "5c54d26c-35c3-4827-adf9-91111ef9b2c0",
         "a1888f77-6551-4271-922d-9851821015ca",
-        "8608988b-09b2-4bc8-82e4-c22a4b6f95a4"
+        "8608988b-09b2-4bc8-82e4-c22a4b6f95a4",
+        "36ac9ec6-3916-483e-88e5-b8c9d846e8aa"
     ],
     "filterType": "GMObject",
     "folderName": "COLLECTIBLES",

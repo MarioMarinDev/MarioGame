@@ -1,4 +1,3 @@
 /// @desc: Interaction
 
-with other win = true;
-// instance_destroy();
+if active with other win = true;
