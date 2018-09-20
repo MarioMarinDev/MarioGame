@@ -1,0 +1,2 @@
+
+contains = obj_coin;

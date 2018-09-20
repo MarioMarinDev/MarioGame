@@ -12,10 +12,12 @@ switch(state){
 			else{ 
 				fade_state = FADE_OUT
 				room_goto(next_room);
+				alarm[0] = fade_delay;
 			}
 		}else{
-			if alpha > 0 alpha -= spd;
-			else instance_destroy();
+			if alpha > 0 && alarm[0] <= 0
+				alpha -= spd;
+			else if alpha <= 0 instance_destroy();
 		}
 	break;
 }

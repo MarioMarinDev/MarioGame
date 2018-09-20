@@ -12,3 +12,5 @@ vspd = 0;
 horizontal_dir = 90;
 rotation_dir = choose(0, 1);
 rotation_spd = 1;
+
+camera = noone;

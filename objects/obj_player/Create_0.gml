@@ -10,11 +10,15 @@ crouching = false;
 wall_sliding = false;
 wall_sliding_dir = NULL;
 ground_pound = false;
+grabbing = noone;
 win = false;
 defeat = false;
 #endregion
 
 #region Movement variables
+
+last_delta = delta_time;
+
 spd = 1.5;
 spd_acceleration = 0.03;
 spd_run = 2.5;
@@ -40,6 +44,7 @@ jumping_forced_elevation = 30;
 #region Delay variables
 delay_ground_pound = room_speed * 0.33;
 delay_win = room_speed * 0.5;
+delay_defeat = delay_win;
 #endregion
 
 #region Sprite variables
@@ -54,9 +59,15 @@ sprite_ground_pound = spr_player_mario_ground_pound;
 sprite_win = spr_player_win;
 sprite_defeat = spr_player_defeat;
 
+sprite_grab_idle = spr_player_mario_grab_idle;
+sprite_grab_walk = spr_player_mario_grab_walk;
+sprite_grab_jump = spr_player_mario_grab_jump;
+sprite_grab_fall = spr_player_mario_grab_fall;
+
 mask_normal = spr_player_mario_mask;
 mask_crouch = spr_player_mario_mask_crouch;
 mask_wall = spr_player_mario_mask_wall;
+mask_ground_pound = spr_player_mario_mask_ground_pound;
 #endregion
 
 #region Sound variables

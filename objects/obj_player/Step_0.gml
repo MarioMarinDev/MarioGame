@@ -1,7 +1,5 @@
 /// @desc: Player Control
 
-// if script_exists(state) script_execute(state);
-
 #region Movement Control
 
 #region Get player input
@@ -17,17 +15,18 @@ var real_spd_max = spd;
 var real_jump_max = jump_max;
 var real_gravity = global.game_gravity;
 var real_gravity_acc = global.game_gravity_acc;
+var grabbing_something = instance_exists(grabbing);
 #endregion
 
 #region Run control
-if( (on_ground || jumping) && global.run){
+if( (on_ground || jumping) && !grabbing_something && global.run){
 	real_spd_acceleration = spr_run_acceleration;
 	real_spd_max = spd_run;
 }
 #endregion
 
 #region Crouch control
-if(on_ground && !wall_sliding && !win && global.move_down){
+if(on_ground && !wall_sliding && !win && !grabbing_something && global.move_down){
 	crouching = true;
 	real_fric = fric_crouch;
 }else if(!place_meeting(x, bbox_bottom - (sprite_get_height(mask_index) * image_yscale), obj_block) && !global.move_down) 
@@ -51,12 +50,13 @@ vspd = clamp(vspd + real_gravity_acc, 0, real_gravity);
 if place_meeting(x, y + step_size, obj_block){
 	on_ground = true; 
 	jumping = false;
+	wall_sliding = false;
 }else on_ground = false;
 #endregion
 
 #region Wall jumping control
 if wall_sliding vspd *= 0.75;
-if(place_meeting(x + (xaxis * 2), y, obj_block) && !crouching && !on_ground && sign(vspd) > 0){
+if(place_meeting(x + (xaxis * 2), y, obj_block) && !crouching && !on_ground && sign(vspd) > 0 && !grabbing_something){
 	wall_sliding = true;
 	wall_sliding_dir = xaxis;	
 }
@@ -152,7 +152,11 @@ if(ground_pound && on_ground && alarm[5] <= 0){
 #endregion
 
 #region Win Control
-if win && on_ground && !camera.zoom && alarm[6] <= 0 alarm[6] = delay_win;
+if win && on_ground && !camera.zoom && alarm[6] <= 0 { 
+	alarm[6] = delay_win;
+	audio_pause_all();
+	scr_player_add_sound(global.game_sound_win, 5, false, true, false, false);
+}
 #endregion
 
 #region Defeat Control
@@ -170,19 +174,32 @@ if(!defeat && defeated){
 if(defeat){
 	var particle = instance_create_depth(x, y, -1, obj_particle);
 	particle.sprite_index = sprite_defeat;
+	//if !defeated particle.anim_type = ANIM_STILL;
+	//else particle.anim_type = ANIM_PLAYER_DEFEAT;
 	particle.anim_type = ANIM_PLAYER_DEFEAT;
+	particle.camera = camera;
+	camera.follows = particle;
+	camera.zoom = true;
+	obj_control.alarm[3] = delay_defeat;
 	instance_destroy();
 }
 #endregion
 
 #region Sprite Control
 
-if xaxis == 0 sprite_index = sprite_idle;
+if xaxis == 0 
+	if !grabbing_something sprite_index = sprite_idle;
+	else sprite_index = sprite_grab_idle;
 else if abs(hspd) >= spd_run * 0.95 sprite_index = sprite_run;
-else sprite_index = sprite_walk;
+else if !grabbing_something sprite_index = sprite_walk;
+else sprite_index = sprite_grab_walk;
 if !on_ground{
-	if vspd <= 1 sprite_index = sprite_jump;
-	else if vspd > 1 sprite_index = sprite_fall;
+	if vspd <= 1 
+		if !grabbing_something sprite_index = sprite_jump;
+		else sprite_index = sprite_grab_jump;
+	else if vspd > 1 
+		if !grabbing_something sprite_index = sprite_fall;
+		else sprite_index = sprite_grab_fall;
 	if wall_sliding sprite_index = sprite_wall;
 }
 if crouching sprite_index = sprite_crouch;
@@ -201,10 +218,11 @@ else if xaxis < 0 image_xscale = abs(image_xscale) * -1;
 
 #region Mask Control
 if crouching mask_index = mask_crouch;
+else if ground_pound && alarm[4] > 0 mask_index = mask_ground_pound;
 else mask_index = mask_normal;
 #endregion
 
 #region Sound Control
-if jumping scr_ac_add(ac, sound_jump, 5, false, false, false, false);
+if jumping && !win scr_ac_add(ac, sound_jump, 5, false, false, false, false);
 else scr_ac_remove(ac, sound_jump);
 #endregion

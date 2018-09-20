@@ -2,6 +2,7 @@
 
 #region Properties variables
 type = NORMAL;
+active = true;
 spd = 1;
 moved = 0;
 dir = 1;

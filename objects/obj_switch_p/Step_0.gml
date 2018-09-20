@@ -1,5 +1,7 @@
 /// @desc: Switch P Control
 
+event_inherited();
+
 var just_hit = false;
 
 if(scr_player_ground_pound_hit(id) && active){
@@ -12,7 +14,9 @@ if(scr_player_ground_pound_hit(id) && active){
 if(just_hit){
 	active = false;
 	frame = 1;
+	grab_able = false;
 	scr_control_active_secrets();
 	scr_player_add_sound(snd_switch_p00, 4, false, true, true, true);
 	scr_player_add_sound(snd_switch_p_music00, 5, false, true, false, false, true);
+	alarm[3] = room_speed / 2;
 }

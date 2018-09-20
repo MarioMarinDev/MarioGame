@@ -14,9 +14,14 @@
         "f75a4d90-2299-4c2b-a3fc-af7e51179383",
         "453c9a4e-eb28-4594-9290-14486cc0da7d",
         "4d724fee-02e3-4c26-9a0d-a7c2c1441a8e",
+        "2f983f11-39b2-44a9-980b-723853279936",
+        "039d87ec-dde1-4bda-b1a8-77879a82f1fd",
+        "2352db8b-edc4-4e1f-9b30-b158e6b0469b",
+        "d2e47d68-b18a-46d6-93d0-ab08b7e9dcfb",
         "98335810-0b4c-480b-bf23-1acddbd16dd7",
         "2454c9d3-41e2-4490-98ee-b20e35e65c7f",
-        "003dfc25-561a-4fe6-a686-9de12977174f"
+        "003dfc25-561a-4fe6-a686-9de12977174f",
+        "95799c68-4cab-4757-b043-821fae6aaae3"
     ],
     "filterType": "GMSprite",
     "folderName": "Mario",

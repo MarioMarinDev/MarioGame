@@ -5,7 +5,8 @@
     "name": "655e85e9-fe3e-4a85-94a5-3715ead673c2",
     "children": [
         "e1ff3366-f968-4daf-9f90-5b338ec51b7e",
-        "68d3cd93-422b-4df0-850c-7cc66df8e907"
+        "68d3cd93-422b-4df0-850c-7cc66df8e907",
+        "2ee86fc2-0d97-46d3-ab63-dbd19d6c61df"
     ],
     "filterType": "GMObject",
     "folderName": "COLLISION",

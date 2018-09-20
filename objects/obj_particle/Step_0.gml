@@ -50,9 +50,10 @@ switch(anim_type){
 				if(elevation > 0){
 					y -= spd;
 					elevation -= abs(spd);
+					camera.follows = noone;
 				}else y += spd;
 				//if y > room_height && elevation <= 0 room_goto(room);
-				if object_outside_view(id) && elevation <= 0 room_goto(room);
+				//if object_outside_view(id) && elevation <= 0 room_goto(room);
 			break;
 		}
 	break;
@@ -74,6 +75,11 @@ switch(anim_type){
 	break;
 	#endregion
 	
+	#region Still Animation
+	case ANIM_STILL:
+		anim_state = START;
+	break;
+	#endregion
 }
 
 // Destroy if outside of room
